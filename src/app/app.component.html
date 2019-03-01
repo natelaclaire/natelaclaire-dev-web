@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <h1><span class="light">Nate</span>LaClaire</h1>
+  <span class="spacer"></span>
+  <a mat-button [routerLink]="['home']" routerLinkActive="active">HOME</a>
+  <a mat-button [routerLink]="['about']" routerLinkActive="active">ABOUT</a>
+  <a mat-button [routerLink]="['cv']" routerLinkActive="active">CV</a>
+  <a mat-button [routerLink]="['contact']" routerLinkActive="active">CONTACT</a>
+  <a mat-button href="https://github.com/natelaclaire"><fa-icon [icon]="faGithub"></fa-icon></a>
+  <a mat-button href="https://twitter.com/natelaclaire"><fa-icon [icon]="faTwitter"></fa-icon></a>
+  <a mat-button href="https://instagram.com/natelaclaire"><fa-icon [icon]="faInstagram"></fa-icon></a>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
