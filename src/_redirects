@@ -1,1 +1,4 @@
 /*  /index.html 200
+
+# Redirect default Netlify subdomain to primary domain
+http://zealous-pasteur-67e16a.netlify.com/* http://natelaclaire.dev/:splat 301!
