@@ -5,6 +5,7 @@ import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import { catchError, retry } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 export interface Photo {
   text: String;
@@ -49,7 +50,6 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    // TODO: Update the URL once we have api.whereisfelix.today
     return this.http.get<MyData>("https://latelynatelaclaire-backend.now.sh/api.json").pipe(
       retry(3), // retry a failed request up to 3 times
       catchError(this.handleError) // then handle the error
@@ -68,6 +68,6 @@ export class DataService {
         `body was: ${error.error}`);
     }
     // return an ErrorObservable with a user-facing error message
-    return new ErrorObservable('Something bad happened; please try again later.');
+    return throwError(error);
   };
 }
