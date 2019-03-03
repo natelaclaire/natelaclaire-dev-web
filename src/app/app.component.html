@@ -1,13 +1,47 @@
-<mat-toolbar color="primary" class="mat-elevation-z8">
-  <h1><span class="light">Nate</span>LaClaire</h1>
-  <span class="spacer"></span>
-  <a mat-button [routerLink]="['home']" routerLinkActive="active">HOME</a>
-  <a mat-button [routerLink]="['about']" routerLinkActive="active">ABOUT</a>
-  <a mat-button [routerLink]="['cv']" routerLinkActive="active">CV</a>
-  <a mat-button [routerLink]="['contact']" routerLinkActive="active">CONTACT</a>
-  <a mat-button href="https://github.com/natelaclaire"><fa-icon [icon]="faGithub"></fa-icon></a>
-  <a mat-button href="https://twitter.com/natelaclaire"><fa-icon [icon]="faTwitter"></fa-icon></a>
-  <a mat-button href="https://instagram.com/natelaclaire"><fa-icon [icon]="faInstagram"></fa-icon></a>
-</mat-toolbar>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Nate LaClaire</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['home']">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['about']">About</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['cv']">CV</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['contact']">Contact</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://github.com/natelaclaire">
+          <fa-icon [icon]="faGithub"></fa-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://twitter.com/natelaclaire">
+          <fa-icon [icon]="faTwitter"></fa-icon>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-2" href="https://instagram.com/natelaclaire">
+          <fa-icon [icon]="faInstagram"></fa-icon>
+        </a>
+      </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+
 
 <router-outlet></router-outlet>
