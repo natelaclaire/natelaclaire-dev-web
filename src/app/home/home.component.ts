@@ -27,7 +27,8 @@ export class HomeComponent implements OnInit {
   }
 
   data = <any> {
-    loading: true
+    loading: true,
+    profilePictureUrl: "/assets/nate-photo.jpg"
   };
 
   public setTitle( newTitle: string) {
