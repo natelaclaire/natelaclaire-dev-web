@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { MyData, DataService } from '../shared/services/data.service';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +11,22 @@ import { MyData, DataService } from '../shared/services/data.service';
 })
 export class HomeComponent implements OnInit {
 
+  photos: Observable<any[]>;
+  moods: Observable<any[]>;
+
+
   refresherInterval = null;
 
   constructor(private titleService: Title,
-    private dataService: DataService) { }
+    private dataService: DataService,
+    db: AngularFirestore) { 
+      this.photos = db.collection('photos', 
+        ref => ref.orderBy('posted', 'desc').limit(10)
+      ).valueChanges();
+      this.moods = db.collection('moods', 
+        ref => ref.orderBy('time', 'desc').limit(1)
+      ).valueChanges();
+    }
 
   ngOnInit() {
     this.setTitle('Home');

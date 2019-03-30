@@ -19,6 +19,11 @@ import { HomeComponent } from './home/home.component';
 
 import { MomentModule } from 'ngx-moment';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { MoodDisplayPipe } from './mood-display.pipe';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +31,8 @@ import { MomentModule } from 'ngx-moment';
     PageComponent,
     FullpageDirective,
     CvComponent,
-    HomeComponent
+    HomeComponent,
+    MoodDisplayPipe
   ],
   imports: [
     BrowserModule,
@@ -38,7 +44,9 @@ import { MomentModule } from 'ngx-moment';
     MatToolbarModule,
     FontAwesomeModule,
     MomentModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [ContentService, Title, DataService],
   bootstrap: [AppComponent]
