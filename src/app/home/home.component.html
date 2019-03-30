@@ -37,7 +37,7 @@
             <div class="col" *ngFor="let currentCommit of commits | async">
               <div class="card">
                 <h5 class="card-header">Code commit
-                  {{currentCommit.timestamp | amTimeAgo}}</h5>
+                  {{currentCommit.timestamp.toDate() | amTimeAgo}}</h5>
                 <div class="card-body">
                   <h5 class="card-title">{{currentCommit.message}}</h5>
                   <p class="card-text">on GitHub repo <a href="https://github.com/{{currentCommit.repo}}"
