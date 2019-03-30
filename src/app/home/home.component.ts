@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   photos: Observable<any[]>;
   moods: Observable<any[]>;
-
+  commits: Observable<any[]>;
 
   refresherInterval = null;
 
@@ -25,6 +25,9 @@ export class HomeComponent implements OnInit {
       ).valueChanges();
       this.moods = db.collection('moods', 
         ref => ref.orderBy('time', 'desc').limit(1)
+      ).valueChanges();
+      this.commits = db.collection('gitCommits', 
+        ref => ref.orderBy('timestamp', 'desc').limit(3)
       ).valueChanges();
     }
 

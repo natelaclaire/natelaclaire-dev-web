@@ -13,14 +13,8 @@
       </div>
 
 
-      <div class="container" *ngIf="data.loading">
-        <div class="row mt-5">
-          <div class="col">
-              <p class="lead text-center"><strong>Gathering additional information. Please be patient&hellip; ⏰</strong></p>
-          </div>
-        </div>
-      </div>
-      <div *ngIf="!data.loading">
+      
+      <div>
         <h2>Recent photos</h2>
         <div class="recentPhotos">
           <span class="recentPhoto" *ngFor="let currentPhoto of photos | async"
@@ -40,7 +34,7 @@
             </div>
           </div>
           <div class="row mt-5">
-            <div class="col" *ngFor="let currentCommit of data.recentCommits">
+            <div class="col" *ngFor="let currentCommit of commits | async">
               <div class="card">
                 <h5 class="card-header">Code commit
                   {{currentCommit.timestamp | amTimeAgo}}</h5>
