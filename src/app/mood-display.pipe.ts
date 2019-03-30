@@ -9,9 +9,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 */
 @Pipe({ name: 'moodDisplay' })
 export class MoodDisplayPipe implements PipeTransform {
-    transform(value: number): string {
+    transform(value: string): string {
+        var valNum = parseInt(value);
         let mood = "";
-        switch (value) {
+        switch (valNum) {
             case 5:
                 mood = "pumped, energized 🤩";
                 break;
