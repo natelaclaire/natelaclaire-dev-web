@@ -2,18 +2,16 @@
   <div class="row mt-5">
     <div class="col">
       <div class="row  section section-border">
-        <div class="col-xs-3">
+        <div class="col">
           <h2>Career</h2>
-        </div>
-
-        <div class="col-xs-9">
+        
           <div class="jd" *ngFor="let item of positions | async">
             <div class="row">
               <div class="col-xs-6">
                 <h4><b>{{ item.position }}</b></h4>
               </div>
-              <div class="col-xs-6 pull-right">
-                <h5 class="pull-right">{{ item.dates }}<br />
+              <div class="col-xs-6 align-right">
+                <h5 class="align-right">{{ item.dates }}<br />
                   {{item.company}} <i>({{item.location}})</i></h5>
               </div>
             </div>
@@ -28,7 +26,7 @@
                 <div *ngIf="item.accomplishments">
                   <b>Selected accomplishments:</b>
                   <ul>
-                    <li *ngFor="let itemm of item.accomplishments">{{itemm.accomplishment}}</li>
+                    <li *ngFor="let accomplishment of item.accomplishments">{{accomplishment}}</li>
                   </ul>
                 </div>
               </div>
