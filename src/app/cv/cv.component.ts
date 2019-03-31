@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'cv',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CvComponent implements OnInit {
 
-  constructor() { }
+  positions: Observable<any[]>;
+
+  constructor(private titleService: Title, db: AngularFirestore) { 
+    this.positions = db.collection('positions', 
+        ref => ref.orderBy('order', 'asc')
+      ).valueChanges();
+  }
 
   ngOnInit() {
+    this.setTitle('Home');
+  }
+
+  public setTitle( newTitle: string) {
+    let finalTitle = 'Nate LaClaire';
+    if (newTitle!='Home') {
+      finalTitle = `${newTitle} - ${finalTitle}`;
+    }
+    this.titleService.setTitle( finalTitle );
   }
 
 }
