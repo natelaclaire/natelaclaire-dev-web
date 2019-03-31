@@ -7,7 +7,7 @@
         </div>
 
         <div class="col-xs-9">
-          <div class="jd" *ngFor="item in positions | async">
+          <div class="jd" *ngFor="let item of positions | async">
             <div class="row">
               <div class="col-xs-6">
                 <h4><b>{{ item.position }}</b></h4>
@@ -28,7 +28,7 @@
                 <div *ngIf="item.accomplishments">
                   <b>Selected accomplishments:</b>
                   <ul>
-                    <li *ngFor="itemm in item.accomplishments">{{itemm.accomplishment}}</li>
+                    <li *ngFor="let itemm of item.accomplishments">{{itemm.accomplishment}}</li>
                   </ul>
                 </div>
               </div>
