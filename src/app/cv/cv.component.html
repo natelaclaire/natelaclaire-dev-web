@@ -7,21 +7,21 @@
         
           <div class="jd" *ngFor="let item of positions | async">
             <div class="row">
-              <div class="col-xs-6">
+              <div class="col-sm">
                 <h4><b>{{ item.position }}</b></h4>
               </div>
-              <div class="col-xs-6 align-right">
-                <h5 class="align-right">{{ item.dates }}<br />
-                  {{item.company}} <i>({{item.location}})</i></h5>
+              <div class="col-sm text-right">
+                {{ item.dates }}<br />
+                  <a *ngIf="item.companyLink" href="{{item.companyLink}}" target="_blank">{{item.company}}</a><span *ngIf="!item.companyLink">{{item.company}}</span>&nbsp;<i>({{item.location}})</i>
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-sm">
                 <p>{{ item.summary }}</p>
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-sm">
 
                 <div *ngIf="item.accomplishments">
                   <b>Selected accomplishments:</b>
