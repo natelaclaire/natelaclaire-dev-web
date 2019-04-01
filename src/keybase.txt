@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/natelaclaire
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://natelaclaire.dev
+  * I am natelaclaire (https://keybase.io/natelaclaire) on keybase.
+  * I have a public key ASAfeYe4fOQyhBA2M0r28fCBeyxOHo0-x9m0MyPF3bKOnwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101e333fcd6203c2e63e99829d1cc8c8008a6fad1504772b43e6ccbfd57db03b92f0a",
+      "host": "keybase.io",
+      "kid": "01201f7987b87ce432841036334af6f1f0817b2c4e1e8d3ec7d9b43323c5ddb28e9f0a",
+      "uid": "b63b77ba09abe5f689d473f7c8f2df19",
+      "username": "natelaclaire"
+    },
+    "merkle_root": {
+      "ctime": 1554137301,
+      "hash": "99efd4c2b570d0d54dde17f9f0c2064752cbc4e558c6375fb17bae74baebd9a03dd7f1576d45c3dc38739af503f0eb9a193ac7b615074b60c38a95ecdb6e088c",
+      "hash_meta": "62f25af3e289f2dbe48a712d2946d457b9e784737baee72e1585dc6bd3178338",
+      "seqno": 5072910
+    },
+    "service": {
+      "entropy": "HruylDebQOu29tr1CbSoEDt1",
+      "hostname": "natelaclaire.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1554137329,
+  "expire_in": 504576000,
+  "prev": "534d2363de2b2e10c8717aad580cd82a987fdad2f13a457c5140ce7d82e36f35",
+  "seqno": 338,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgH3mHuHzkMoQQNjNK9vHwgXssTh6NPsfZtDMjxd2yjp8Kp3BheWxvYWTETJcCzQFSxCBTTSNj3isuEMhxeq1YDNgqmH/a0vE6RXxRQM59guNvNcQgCyN3bIYVm/NNj9OprygElfdJJ2NJLdUIVFzjLTMs8HECAcKjc2lnxED26B4k968dt2waHJkIwqit8a7+CL87Qb2YM4/9x+3LNseGQbvDUrBGpSHSfWN3Ou2sSbDQhJXo5kn4IbXdROcAqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQg5rSRNNEga7lBd6TelGosbVJ0c6uLRKAf61krLXBW0P2jdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/natelaclaire
+
+==================================================================
