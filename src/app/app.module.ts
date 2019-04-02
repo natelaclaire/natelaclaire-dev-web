@@ -9,6 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatButtonModule, MatCheckboxModule, MatCardModule, MatToolbarModule} from '@angular/material';
 import { PageComponent } from './page/page.component';
+import { AboutComponent } from './about/about.component';
 import { ContentService } from './shared/services/content.service';
 import { DataService } from './shared/services/data.service'
 import { FullpageDirective } from './shared/directives/fullpage.directive';
@@ -32,7 +33,8 @@ import { MoodDisplayPipe } from './mood-display.pipe';
     FullpageDirective,
     CvComponent,
     HomeComponent,
-    MoodDisplayPipe
+    MoodDisplayPipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
