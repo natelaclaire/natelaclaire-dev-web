@@ -13,7 +13,7 @@
       </div>
 
 
-      
+
       <div>
         <h2>Recent photos</h2>
         <div class="recentPhotos">
@@ -25,10 +25,46 @@
         </div>
 
         <div class="container">
+          <div *ngFor="let currentMacros of macros | async">
+            <h2 class="text-center mt-5">
+              Nate's macros for {{currentMacros.date.toDate() | amDateFormat:'LL'}}
+            </h2>
+            <div class="row">
+              <div class="col">
+                <h3 class="text-center">Protein:</h3>
+                <p class="h1 text-center">{{currentMacros.protein}}g</p>
+              </div>
+              <div class="col">
+                <h3 class="text-center">Fats:</h3>
+                <p class="h1 text-center">{{currentMacros.fats}}g</p>
+              </div>
+              <div class="col">
+                <h3 class="text-center">Carbohydrates:</h3>
+                <p class="h1 text-center">{{currentMacros.carbs}}g</p>
+              </div>
+            </div>
+            <h2 class="text-center mt-5">
+              Nate's stats for {{currentMacros.date.toDate() | amDateFormat:'LL'}}
+            </h2>
+            <div class="row">
+              <div class="col">
+                <h3 class="text-center">Sleep:</h3>
+                <p class="h1 text-center">{{currentMacros.sleep}} hours</p>
+              </div>
+              <div class="col">
+                <h3 class="text-center">Calories:</h3>
+                <p class="h1 text-center">{{currentMacros.calories}}</p>
+              </div>
+              <div class="col">
+                <h3 class="text-center">Weight:</h3>
+                <p class="h1 text-center">{{currentMacros.weight}} pounds</p>
+              </div>
+            </div>
+          </div>
           <div class="row mt-5">
             <div class="col">
               <h2 class="text-center" *ngFor="let currentMood of moods | async">
-                Nate feels <b>{{currentMood.mood | moodDisplay}} </b> 
+                Nate feels <b>{{currentMood.mood | moodDisplay}} </b>
                 <span class="footnote">({{currentMood.time.toDate() | amTimeAgo}})</span>
               </h2>
             </div>

@@ -19,6 +19,7 @@ export interface Food {
   carbs: Number;
   protein: Number;
   fat: Number;
+  date: Date;
 }
 
 export interface Commit {
@@ -50,7 +51,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get<MyData>("https://latelynatelaclaire-backend.now.sh/api.json").pipe(
+    return this.http.get<MyData>('https://latelynatelaclaire-backend.now.sh/api.json').pipe(
       retry(3), // retry a failed request up to 3 times
       catchError(this.handleError) // then handle the error
     );
@@ -69,5 +70,5 @@ export class DataService {
     }
     // return an ErrorObservable with a user-facing error message
     return throwError(error);
-  };
+  }
 }

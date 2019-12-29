@@ -13,25 +13,29 @@ export class HomeComponent implements OnInit {
   photos: Observable<any[]>;
   moods: Observable<any[]>;
   commits: Observable<any[]>;
+  macros: Observable<any[]>;
 
   refresherInterval = null;
 
   constructor(private titleService: Title,
-    db: AngularFirestore) { 
-      this.photos = db.collection('photos', 
+    db: AngularFirestore) {
+      this.photos = db.collection('photos',
         ref => ref.orderBy('posted', 'desc').limit(10)
       ).valueChanges();
-      this.moods = db.collection('moods', 
+      this.moods = db.collection('moods',
         ref => ref.orderBy('time', 'desc').limit(1)
       ).valueChanges();
-      this.commits = db.collection('gitCommits', 
+      this.commits = db.collection('gitCommits',
         ref => ref.orderBy('timestamp', 'desc').limit(3)
+      ).valueChanges();
+      this.macros = db.collection('macros',
+        ref => ref.orderBy('date', 'desc').limit(1)
       ).valueChanges();
     }
 
   ngOnInit() {
     this.setTitle('Home');
-    
+
   }
 
   data = <any> {
