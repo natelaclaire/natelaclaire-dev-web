@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
 
   data = <any> {
     loading: true,
-    profilePictureUrl: "/assets/nate-photo.jpg"
+    profilePictureUrl: "/assets/nate-photo-2019.jpg"
   };
 
   public setTitle( newTitle: string) {
