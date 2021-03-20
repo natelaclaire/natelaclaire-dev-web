@@ -26,7 +26,7 @@
 
         <div class="container">
           <h2 class="text-center mt-5">
-            Links of the Day
+            Link of the Day
           </h2>
           <div class="row mt-5">
             <div class="col" *ngFor="let currentLink of links | async">
@@ -37,6 +37,7 @@
                 </div>
               </div>
             </div>
+          </div>
           <div *ngFor="let currentMacros of macros | async">
             <h2 class="text-center mt-5">
               Nate's macros for {{currentMacros.date.toDate() | amDateFormat:'LL'}}
