@@ -17,6 +17,7 @@ import { FullpageDirective } from './shared/directives/fullpage.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CvComponent } from './cv/cv.component';
 import { HomeComponent } from './home/home.component';
+import { ClassesComponent } from './classes/classes.component';
 
 import { MomentModule } from 'ngx-moment';
 
@@ -34,7 +35,8 @@ import { MoodDisplayPipe } from './mood-display.pipe';
     CvComponent,
     HomeComponent,
     MoodDisplayPipe,
-    AboutComponent
+    AboutComponent,
+    ClassesComponent
   ],
   imports: [
     BrowserModule,

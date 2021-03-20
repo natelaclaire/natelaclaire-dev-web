@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col">
+      <h1>Classes I've Taught</h1>
+      <p>Syllabi and other resources coming soon</p>
+
+      <ul>
+        <li *ngFor="let class of classes | async">{{ item.headline }}</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
