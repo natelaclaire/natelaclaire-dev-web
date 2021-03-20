@@ -25,6 +25,19 @@
         </div>
 
         <div class="container">
+          <h2 class="text-center mt-5">
+            Links of the Day
+          </h2>
+          <div class="row mt-5">
+            <div class="col" *ngFor="let currentLink of links | async">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{currentLink.title}}</h5>
+                  <p class="card-text"><a href="{{currentLink.url}}"
+                      target="_blank">{{currentLink.title}}</a></p>
+                </div>
+              </div>
+            </div>
           <div *ngFor="let currentMacros of macros | async">
             <h2 class="text-center mt-5">
               Nate's macros for {{currentMacros.date.toDate() | amDateFormat:'LL'}}

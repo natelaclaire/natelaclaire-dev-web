@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   moods: Observable<any[]>;
   commits: Observable<any[]>;
   macros: Observable<any[]>;
+  links: Observable<any[]>;
 
   refresherInterval = null;
 
@@ -29,6 +30,9 @@ export class HomeComponent implements OnInit {
         ref => ref.orderBy('timestamp', 'desc').limit(3)
       ).valueChanges();
       this.macros = db.collection('macros',
+        ref => ref.orderBy('date', 'desc').limit(1)
+      ).valueChanges();
+      this.macros = db.collection('links',
         ref => ref.orderBy('date', 'desc').limit(1)
       ).valueChanges();
     }
