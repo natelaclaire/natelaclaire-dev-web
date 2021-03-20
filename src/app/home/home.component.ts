@@ -32,8 +32,8 @@ export class HomeComponent implements OnInit {
       this.macros = db.collection('macros',
         ref => ref.orderBy('date', 'desc').limit(1)
       ).valueChanges();
-      this.macros = db.collection('links',
-        ref => ref.orderBy('date', 'desc').limit(1)
+      this.links = db.collection('links',
+        ref => ref.orderBy('date', 'desc').limit(3)
       ).valueChanges();
     }
 
