@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
         ref => ref.orderBy('date', 'desc').limit(1)
       ).valueChanges();
       this.links = db.collection('links',
-        ref => ref.orderBy('date', 'desc').limit(3)
+        ref => ref.where('date', '<=', new Date()).orderBy('date', 'desc').limit(3)
       ).valueChanges();
     }
 
