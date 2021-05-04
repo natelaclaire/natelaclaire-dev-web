@@ -26,6 +26,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { MoodDisplayPipe } from './mood-display.pipe';
 
+import { PostsService } from './shared/services/posts.service';
+import { BlogComponent } from './blog/blog.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { MoodDisplayPipe } from './mood-display.pipe';
     HomeComponent,
     MoodDisplayPipe,
     AboutComponent,
-    ClassesComponent
+    ClassesComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,7 @@ import { MoodDisplayPipe } from './mood-display.pipe';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
-  providers: [ContentService, Title, DataService],
+  providers: [ContentService, Title, DataService, PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
