@@ -6,6 +6,7 @@ export interface Post {
     title: Object;
     content: Object;
     date: String;
+    link: String;
 }
 
 @Injectable({
