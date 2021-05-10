@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faGithub, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faTwitter, faInstagram, faLinkedin, faKeybase } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +11,5 @@ export class AppComponent {
   faTwitter = faTwitter;
   faInstagram = faInstagram;
   faLinkedin = faLinkedin;
+  faKeybase = faKeybase;
 }
