@@ -20,12 +20,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private titleService: Title,
     db: AngularFirestore) {
-      this.photos = db.collection('photos',
-        ref => ref.orderBy('posted', 'desc').limit(10)
-      ).valueChanges();
-      this.moods = db.collection('moods',
-        ref => ref.orderBy('time', 'desc').limit(1)
-      ).valueChanges();
       this.commits = db.collection('gitCommits',
         ref => ref.orderBy('timestamp', 'desc').limit(3)
       ).valueChanges();
