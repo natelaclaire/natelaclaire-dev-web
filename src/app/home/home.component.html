@@ -15,15 +15,6 @@
 
 
       <div>
-        <h2>Recent photos</h2>
-        <div class="recentPhotos">
-          <span class="recentPhoto" *ngFor="let currentPhoto of photos | async"
-            [ngStyle]="{'background-image': 'url(\'' + currentPhoto.url + '\')'}"
-            onclick="window.open('https://instagram.com/natelaclaire', '_blank');">
-
-          </span>
-        </div>
-
         <div class="container">
           <h2 class="text-center mt-5">
             Link of the Day
@@ -81,14 +72,6 @@
                 <h3 class="text-center">Waist:</h3>
                 <p class="h1 text-center">{{currentMacros.waist}}<br><small class="text-muted">inches</small></p>
               </div>
-            </div>
-          </div>
-          <div class="row mt-5">
-            <div class="col">
-              <h2 class="text-center" *ngFor="let currentMood of moods | async">
-                Nate feels <b>{{currentMood.mood | moodDisplay}} </b>
-                <span class="footnote">({{currentMood.time.toDate() | amTimeAgo}})</span>
-              </h2>
             </div>
           </div>
           <div class="row mt-5">
